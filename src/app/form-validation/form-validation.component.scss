@@ -1,0 +1,29 @@
+
+.alert{
+    padding:20px;
+    background-color:darkred;
+    color:#fff;
+    font-size:18px;
+    font-style:italic;
+}
+.has-error{
+    border:1px solid red;
+}
+.disabled{
+    background:red;
+}
+.validation-info{
+    font-weight: 700;
+    color: darkgreen;
+}
+
+.preview{
+    margin:20px auto;
+    width:150px;
+    height:150px;
+    border:1px solid black;
+    background-color:darkgray;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+}

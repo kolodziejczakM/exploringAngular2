@@ -1,0 +1,34 @@
+<form [formGroup]="complexForm" (ngSubmit)="submitForm(complexForm.value)">
+  <div class="form-group">
+    <label for="firstName">First name:</label>
+    <input id="firstName" type="text" formControlName="firstName" [ngClass]="{'has-error':!complexForm.controls.firstName.valid && complexForm.controls.firstName.dirty}"/>
+    <span class="validation-info">[Required only]</span>
+  </div>
+  <div class="form-group">
+    <label for="workerId">Worker ID:</label>
+    <input id="workerId" type="text" formControlName="workerId" [ngClass]="{'has-error':!complexForm.controls.workerId.valid && complexForm.controls.workerId.dirty}"/>
+    <span class="validation-info">[Required, minLength=4, maxLength=6]</span>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" [ngClass]="{'has-error':!complexForm.controls.email.valid && complexForm.controls.email.dirty}"/>
+    <span class="validation-info">[Required, Email pattern]</span>
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone number:</label>
+    <input type="text" id="phone" formControlName="phone" [ngClass]="{'has-error':!complexForm.controls.phone.valid && complexForm.controls.phone.dirty}"/>
+    <span class="validation-info">[Required, Phone pattern]</span>
+  </div>
+  <div class="form-group">
+   <label for="file">Profile picture:</label>
+   <input id="file" type="file"  (change)="fileChangeEvent($event,this)" placeholder="Upload file..." /><br>
+   <span class="validation-info">[Variable validation, angular can't handle type=file]</span>
+   <div class="preview" [style.background-image]="'url(' + photoBase64 + ')'"></div>
+  </div>
+  <button type="button" (click)="logThisForm()">Log form Object</button>
+  
+  <div [hidden]="!complexForm.controls.email.hasError('required') || !complexForm.controls.email.dirty" class="alert">
+      Email field is required. 
+  </div> <!--You must add [hidden] { display: none !important;} to styles file. [hidden] is ng-show equivalent -->
+  <button type="submit" class="center-block" [ngClass]="{'disabled':!complexForm.valid}" [disabled]="!complexForm.valid">Submit</button>
+</form>
