@@ -1,0 +1,89 @@
+{
+    "name":"root",
+    "subnodes":[
+        {
+            "name": "Janusz",
+            "subnodes":[
+                {
+                    "name":"Janina",
+                    "subnodes":[
+                        {"name":"Janina's cat", "subnodes":[]}
+                    ]
+                },
+                {
+                    "name":"Jagoda",
+                    "subnodes":[
+                        {"name":"Jagoda's dog", "subnodes":[]},
+                        {"name":"Jagoda's hamster", "subnodes":[]},
+                        {"name":"Jagoda's rabbit", "subnodes":[]}
+                    ]
+                },
+                {
+                    "name":"Joanna",
+                    "subnodes":[
+                        {"name":"Joanna's squirrel", "subnodes":[]},
+                        {"name":"Joanna's hedgehog", "subnodes":[]}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Maciej",
+            "subnodes":[
+                {
+                    "name":"Małgorzata",
+                    "subnodes":[
+                        {"name":"Małgorzata's chinchillas", "subnodes":[]},
+                        {"name":"Małgorzata's chinchillas2", "subnodes":[]},
+                        {"name":"Małgorzata's chinchillas3", "subnodes":[]},
+                        {"name":"Małgorzata's chinchillas4", "subnodes":[]},
+                        {"name":"Małgorzata's chinchillas5", "subnodes":[]},
+                        {"name":"Małgorzata's chinchillas6", "subnodes":[]}
+                    ]
+                },
+                {
+                    "name":"Malwina",
+                    "subnodes":[
+                        {"name":"Malwina's fish", "subnodes":[]},
+                        {"name":"Malwina's mouse", "subnodes":[]},
+                        {"name":"Malwina's rat", "subnodes":[]},
+                        {"name":"Malwina's gold fish", "subnodes":[]}
+                    ]
+                },
+                {
+                    "name":"Maja",
+                    "subnodes":[
+                        {"name":"Maja's bee", "subnodes":[]},
+                        {"name":"Maja's housefly", "subnodes":[]}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Andrzej",
+            "subnodes":[
+                {
+                    "name":"Anna",
+                    "subnodes":[
+                        {"name":"Anna's skunk", "subnodes":[]}
+                    ]
+                },
+                {
+                    "name":"Anita",
+                    "subnodes":[
+                        {"name":"Anita's cat", "subnodes":[]},
+                        {"name":"Anita's cat2", "subnodes":[]},
+                        {"name":"Anita's cat3", "subnodes":[]}
+                    ]
+                },
+                {
+                    "name":"Agata",
+                    "subnodes":[
+                        {"name":"Agata's snake", "subnodes":[]},
+                        {"name":"Agata's snake2", "subnodes":[]}
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+<h1>
+    {{title}}
+</h1>
+<hr>
+<h2>Form validation (model driven approach)</h2>
+<app-form-validation></app-form-validation>
+<hr>
+<h2>Http service</h2>
+<h3>GET</h3>
+<button (click)="getMyIp();">Click to fetch Your IP</button>
+<div class="fetched-info">Your IP: {{fetchedIp}}</div>
+<hr>
+<h3>POST</h3>
+<button (click)="postFirstName();">Click to POST author firstName</button>
+[Check your console]
+<hr>
+<h3>PUT</h3>
+<button (click)="changeFirstName();">Click to PUT author firstName</button>
+[Check your console]
+<hr>
+<h3>DELETE</h3>
+<button (click)="deleteFirstName();">Click to DELETE author firstName</button>
+[Check your console]
+<hr>  
+<h3>Observables</h3>
+<p>Number in store:{{getCounter()}}</p>
+<p>Counter async:{{ipAsync}} <button (click)="getIpAsync()">getIpAsync</button></p>
+<button (click)="incrementCounter()">Increment</button>

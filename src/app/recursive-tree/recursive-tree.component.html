@@ -1,0 +1,14 @@
+<p>
+  FLOW OF DATA: <br>
+  1. On Parent comp init go for a 'main' name && getActual tree data. <br>
+  2. Set that data on storeLike <br>
+  3. Get this data on comps <br>
+</p>
+<div class="tree-wrapper">
+  <div *ngFor="let node of tree; let index = i;">
+    {{node.name}}
+  </div>
+</div>
+<div class="actual-level">
+
+</div>
