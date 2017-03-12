@@ -5,25 +5,28 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { ResourceService } from './resource.service';
-import { StoreLikeService } from './storeLike.service';
+import { AppStore } from './app.store';
 
 import { AppComponent } from './app.component';
 import { FormValidationComponent } from './form-validation/form-validation.component';
-import { RecursiveTreeComponent } from './recursive-tree/recursive-tree.component';
+import { FileBasedComponent } from './file-based/file-based.component';
 import { BasicsComponent } from './basics/basics.component';
-
+import { TreeComponent } from './tree/tree.component';
+import { MyselectComponent } from './myselect/myselect.component';
 
 const appRoutes: Routes = [
     { path: '', component: BasicsComponent },
-    { path: 'recursive-tree', component: RecursiveTreeComponent }
+    { path: 'file-based', component: FileBasedComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     FormValidationComponent,
-    RecursiveTreeComponent,
-    BasicsComponent
+    FileBasedComponent,
+    BasicsComponent,
+    TreeComponent,
+    MyselectComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     ResourceService,
-    StoreLikeService
+    AppStore
     ],
   bootstrap: [AppComponent]
 })

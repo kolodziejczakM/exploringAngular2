@@ -1,0 +1,11 @@
+<p>
+   You are on: {{currentNode.name}} <!-- do not use function getter here -->
+</p>
+<app-myselect></app-myselect>
+
+<button (click)="goBack();">
+    Go back
+</button>
+<div class="tree-wrapper"> 
+    <app-tree [treejson]="tree"></app-tree>
+</div>

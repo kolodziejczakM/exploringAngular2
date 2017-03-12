@@ -1,0 +1,7 @@
+{
+    "all":[
+        {"name": "Man names", "value": "man"},
+        {"name": "Not available", "value":"film"},
+        {"name": "Banned", "value":"music"}
+    ]
+}

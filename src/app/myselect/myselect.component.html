@@ -1,0 +1,3 @@
+<select (change)="setCurrentOption($event)"> 
+    <option *ngFor="let option of selectOptions" [ngValue]="option">{{option.name}}</option>
+</select>

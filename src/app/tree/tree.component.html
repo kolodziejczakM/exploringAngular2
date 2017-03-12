@@ -1,0 +1,6 @@
+<ul>
+    <li class="tree-block" *ngFor="let node of treejson; let index = i;" (click)="extendThat($event, node)">
+        {{node.name}}
+        <app-tree *ngIf="node.extended" [treejson]="node.subnodes"></app-tree>
+    </li>
+</ul>

@@ -23,3 +23,20 @@ button{
     display:block;
     margin:10px auto;
 }
+ul{
+    padding:0;
+}
+.tree-block {
+    border:1px solid black;
+    padding: 15px;
+    list-style-type: none;
+    display: block;
+}
+
+.tree-wrapper{
+    border: 1px solid violet;
+}
+
+.actual-level{
+    border: 1px solid orange;
+}

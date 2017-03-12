@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ResourceService } from '../resource.service';
-import { StoreLikeService } from '../storeLike.service';
+import { AppStore } from '../app.store';
 import { Observable, BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -15,7 +15,7 @@ export class BasicsComponent implements OnInit {
     ipAsync;
     
     constructor(
-        private _storeLikeService: StoreLikeService,
+        private _appStore: AppStore,
         private _resService: ResourceService) {}
 
     ngOnInit(){
@@ -23,21 +23,21 @@ export class BasicsComponent implements OnInit {
     }
 
     incrementCounter(){
-        this._storeLikeService.IncrementCounter();
+        this._appStore.IncrementCounter();
     }
 
     getCounter(){
-        return this._storeLikeService.getCounter();
+        return this._appStore.getCounter();
     }
 
     getIpAsync(){
-        this._storeLikeService.getIpAsync().subscribe(res =>{
+        this._appStore.getIpAsync().subscribe(res =>{
             this.ipAsync = res;
         });
     }
 
     counterWatcher() {
-        this._storeLikeService.counter.subscribe({
+        this._appStore.counter.subscribe({
             next: (v) => console.log('CounterWatcher: counter has changed: ' + v)
         });
     }

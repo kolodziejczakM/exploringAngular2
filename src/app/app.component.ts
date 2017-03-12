@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { StoreLikeService } from './storeLike.service';
 
 @Component({
     selector: 'app-root',
@@ -9,11 +8,11 @@ import { StoreLikeService } from './storeLike.service';
 export class AppComponent implements OnInit {
    
     constructor(
-        private _storeLikeService: StoreLikeService
+       
         ) {}
 
     ngOnInit(){
-       this._storeLikeService.getJSONtree();
+   
     }
 
 }
