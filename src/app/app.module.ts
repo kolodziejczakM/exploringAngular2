@@ -13,10 +13,12 @@ import { FileBasedComponent } from './file-based/file-based.component';
 import { BasicsComponent } from './basics/basics.component';
 import { TreeComponent } from './tree/tree.component';
 import { MyselectComponent } from './myselect/myselect.component';
+import { AdvancedFeaturesComponent } from './advanced-features/advanced-features.component';
 
 const appRoutes: Routes = [
     { path: '', component: BasicsComponent },
-    { path: 'file-based', component: FileBasedComponent }
+    { path: 'file-based', component: FileBasedComponent },
+    { path: 'advanced', component: AdvancedFeaturesComponent }
 ];
 
 @NgModule({
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
     FileBasedComponent,
     BasicsComponent,
     TreeComponent,
-    MyselectComponent
+    MyselectComponent,
+    AdvancedFeaturesComponent
   ],
   imports: [
     BrowserModule,

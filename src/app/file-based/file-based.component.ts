@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppStore } from '../app.store';
-import { Observable } from 'rxjs';
+// import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-file-based',
@@ -12,6 +12,7 @@ export class FileBasedComponent implements OnInit {
     currentNode = {subnodes:[]};
     selectOptions;
     currentOption;
+    boolVal;
 
     constructor(
         private _appStore: AppStore
@@ -22,6 +23,23 @@ export class FileBasedComponent implements OnInit {
 
         this.getTree();
         this.getCurrentNode();
+        this.getBoolVal();
+    }
+
+    getBoolVal() {
+        this._appStore.getBoolVal().unsubscribe();
+        this._appStore.getBoolVal().subscribe(storeVal  => {
+            this.boolVal = storeVal;
+            console.log('boolVal (fileBasedComp) ', this.boolVal);
+        });
+    }
+
+    getBool(){
+        console.log('boolVal (advancedComp) ', this.boolVal);
+    }
+
+    setBoolVal() {
+        this._appStore.getBoolVal().next('FileBased');
     }
 
     fetchData() {
@@ -30,7 +48,6 @@ export class FileBasedComponent implements OnInit {
              this._appStore.getJSONtree(val);
         })   
     }
-
 
     getTree() {
         this._appStore.getTree().subscribe(jsonable  => {
@@ -64,6 +81,7 @@ export class FileBasedComponent implements OnInit {
         }else if(this._appStore.nodeHistory[this._appStore.nodeHistory.length -1].name !== node.name){
             this._appStore.nodeHistory.push(node);
         }
+        console.log('currentNode set.');
     }
 
 }

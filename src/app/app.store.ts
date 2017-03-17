@@ -8,6 +8,7 @@ import { Http } from '@angular/http';
 export class AppStore{
     counter = new BehaviorSubject(0); 
     ipAsync = new AsyncSubject();
+    boolVal = new BehaviorSubject('Nie ustawiono');
 
     tree = new BehaviorSubject({subnodes:[]});
     currentNode = new BehaviorSubject({subnodes:[]});
@@ -23,6 +24,10 @@ export class AppStore{
     IncrementCounter(){
         const nextValue = this.counter.getValue() + 1;
         this.counter.next(nextValue);
+    }
+
+    getBoolVal() {
+        return this.boolVal;
     }
 
     getCounter(){
