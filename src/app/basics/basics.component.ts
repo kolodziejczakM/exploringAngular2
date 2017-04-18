@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ResourceService } from '../resource.service';
 import { AppStore } from '../app.store';
 import { Observable, BehaviorSubject } from 'rxjs';
+import { ParentService } from '../parent.service';
 
 @Component({
     selector: 'app-basics',
     templateUrl: './basics.component.html',
     styleUrls: ['./basics.component.scss']
 })
-export class BasicsComponent implements OnInit {
+export class BasicsComponent extends ParentService implements OnInit {
     title = 'Test angular 2 functionality & elements!';
     fetchedIp:String;
     name: string; 
@@ -16,7 +17,10 @@ export class BasicsComponent implements OnInit {
     
     constructor(
         private _appStore: AppStore,
-        private _resService: ResourceService) {}
+        private parentService: ParentService,
+        private _resService: ResourceService) {
+            super();
+        }
 
     ngOnInit(){
         this.counterWatcher();

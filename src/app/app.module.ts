@@ -15,6 +15,8 @@ import { TreeComponent } from './tree/tree.component';
 import { MyselectComponent } from './myselect/myselect.component';
 import { AdvancedFeaturesComponent } from './advanced-features/advanced-features.component';
 
+import { ParentService } from './parent.service';
+
 const appRoutes: Routes = [
     { path: '', component: BasicsComponent },
     { path: 'file-based', component: FileBasedComponent },
@@ -40,7 +42,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     ResourceService,
-    AppStore
+    AppStore,
+    ParentService
     ],
   bootstrap: [AppComponent]
 })

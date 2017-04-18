@@ -1,22 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { AppStore } from '../app.store';
-// import { Observable } from 'rxjs';
+import { ParentService } from '../parent.service';
 
 @Component({
     selector: 'app-file-based',
     templateUrl: './file-based.component.html',
     styleUrls: ['./file-based.component.scss']
 })
-export class FileBasedComponent implements OnInit {
+export class FileBasedComponent extends ParentService implements OnInit {
     tree;
     currentNode = {subnodes:[]};
     selectOptions;
     currentOption;
     boolVal;
-
     constructor(
-        private _appStore: AppStore
-    ) { }
+        private _appStore: AppStore,
+        private _parentService: ParentService
+    ) {
+        super();
+     }
 
     ngOnInit() {
         this.fetchData();
@@ -27,7 +29,7 @@ export class FileBasedComponent implements OnInit {
     }
 
     getBoolVal() {
-        this._appStore.getBoolVal().unsubscribe();
+       //  this._appStore.getBoolVal().unsubscribe();
         this._appStore.getBoolVal().subscribe(storeVal  => {
             this.boolVal = storeVal;
             console.log('boolVal (fileBasedComp) ', this.boolVal);
